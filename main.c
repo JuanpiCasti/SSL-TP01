@@ -4,17 +4,15 @@
 #include <ctype.h>
 
 int main () {
-    char caracter, caracterAlterado;
+    char caracter;
 
     while((caracter = getchar()) != EOF){
         if (islower(caracter))
         {
-            caracterAlterado = toupper(caracter);
-            printf("%c", caracterAlterado);
+            printf("%c", toupper(caracter));
         } else if (isupper(caracter))
         {
-            caracterAlterado = tolower(caracter);
-            printf("%c", caracterAlterado);
+            printf("%c", tolower(caracter));
         } else if (isdigit(caracter))
         {
             // No imprimo nada
@@ -23,9 +21,9 @@ int main () {
         }
     };
 
-    printf("\n");
+    /* printf("\n") Era para que la salida no quede pegada con la linea de comandos,
+    pero tecnicamente seria como un caracter de mas (pensando tambien en la salida a un archivo).
+    */
 
-
-    
     return 0;
 }
