@@ -9,15 +9,15 @@ int main () {
     while((caracter = getchar()) != EOF){
         if (islower(caracter))
         {
-            printf("%c", toupper(caracter));
+            putchar(toupper(caracter));
         } else if (isupper(caracter))
         {
-            printf("%c", tolower(caracter));
+            putchar(tolower(caracter));
         } else if (isdigit(caracter))
         {
             // No imprimo nada
         } else {
-            printf("%c", caracter);
+            putchar(caracter);
         }
     };
 
